@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+
+  
 }
 
 .App-logo {
@@ -21,7 +23,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: red;
+
+  & span {
+    font-weight: 600;
+  }
 }
 
 .App-link {
@@ -34,5 +40,43 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+main {
+  padding: 30px;
+
+  &:has(> form) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    table {
+      width: -webkit-fill-available;
+      padding: 20px;
+
+      td.actions {
+        display: flex;
+        gap: 15px;
+
+        .btn {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          padding: 10px;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      width: 50%;
+
+      .btn {
+        min-width: 100px;
+      }
+    }
   }
 }
